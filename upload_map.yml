@@ -385,6 +385,12 @@ css:
   .wikisync_temp/.wikisync_temp/pages/wet-lab/wet-lab.css:
     link_URL: https://2021.igem.org/Template:CUHKSZ/-wikisync_temp/-wikisync_temp/pages/wet-lab/wet-labCSS?action=raw&ctype=text/css
     md5: c60af77ddd29cfd003da39690c04ceda
+  .wikisync_temp/Attribution/design.css:
+    link_URL: https://2021.igem.org/Template:CUHKSZ/-wikisync_temp/Attribution/designCSS?action=raw&ctype=text/css
+    md5: ''
+  .wikisync_temp/Contribution/design.css:
+    link_URL: https://2021.igem.org/Template:CUHKSZ/-wikisync_temp/Contribution/designCSS?action=raw&ctype=text/css
+    md5: ''
   .wikisync_temp/attribution/design.css:
     link_URL: https://2021.igem.org/Template:CUHKSZ/-wikisync_temp/attribution/designCSS?action=raw&ctype=text/css
     md5: a02df6647bbf60757e3d237bbd9005e1
@@ -430,6 +436,9 @@ css:
   Contribution/design.css:
     link_URL: https://2021.igem.org/Template:CUHKSZ/Contribution/designCSS?action=raw&ctype=text/css
     md5: 6ce4812f26bf5113c2bb8fb7fa566931
+  Description/design.css:
+    link_URL: https://2021.igem.org/Template:CUHKSZ/Description/designCSS?action=raw&ctype=text/css
+    md5: ''
   attribution/design.css:
     link_URL: https://2021.igem.org/Template:CUHKSZ/attribution/designCSS?action=raw&ctype=text/css
     md5: a02df6647bbf60757e3d237bbd9005e1
@@ -634,6 +643,12 @@ html:
   .wikisync_temp/.wikisync_temp/team/index.html:
     link_URL: https://2021.igem.org/Team:CUHKSZ/.wikisync_temp/.wikisync_temp/team
     md5: f32e2fb027d77336ec496dbe203925dc
+  .wikisync_temp/Attribution/index.html:
+    link_URL: https://2021.igem.org/Team:CUHKSZ/.wikisync_temp/Attribution
+    md5: ''
+  .wikisync_temp/Contribution/index.html:
+    link_URL: https://2021.igem.org/Team:CUHKSZ/.wikisync_temp/Contribution
+    md5: ''
   .wikisync_temp/attribution/index.html:
     link_URL: https://2021.igem.org/Team:CUHKSZ/.wikisync_temp/attribution
     md5: 73af3b5b03bdd3334ad9e0989651c87d
@@ -664,6 +679,9 @@ html:
   .wikisync_temp/pages/protocol/index.html:
     link_URL: https://2021.igem.org/Team:CUHKSZ/.wikisync_temp/pages/protocol
     md5: e675665830c53c766d1c0ae3b727252b
+  .wikisync_temp/pages/safety/index.html:
+    link_URL: https://2021.igem.org/Team:CUHKSZ/.wikisync_temp/pages/safety
+    md5: ''
   .wikisync_temp/pages/special-thanks/index.html:
     link_URL: https://2021.igem.org/Team:CUHKSZ/.wikisync_temp/pages/special-thanks
     md5: cbf4520cb9a430ac69e63f465bfec97c
@@ -685,6 +703,9 @@ html:
   Contribution/index.html:
     link_URL: https://2021.igem.org/Team:CUHKSZ/Contribution
     md5: ff5fff9b4061fcba644f64cb9fe9e632
+  Description/index.html:
+    link_URL: https://2021.igem.org/Team:CUHKSZ/Description
+    md5: ''
   attribution/index.html:
     link_URL: https://2021.igem.org/Team:CUHKSZ/attribution
     md5: 85eed262c519d17eb0d4dd3e37dba8fd
