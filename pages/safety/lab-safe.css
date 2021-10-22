@@ -1,0 +1,26 @@
+.lab-safe-passage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lab-safe-para{
+   margin-top: 60px !important;
+   margin-left: 0px !important;
+   text-align: justify;
+   text-indent: 2em;
+   margin-bottom: 0px !important;
+}
+
+.lab-safe-table{
+    align-self: center;
+    margin-top: 40px;
+}
+
+.proj-safe-para{
+    margin-top: 60px !important;
+    margin-left: 0px !important;
+    text-align: justify;
+    text-indent: 2em;
+    margin-bottom: 0px !important;
+ }

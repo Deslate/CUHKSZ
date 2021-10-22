@@ -1,0 +1,9 @@
+#content {
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+}
+
+#top_title{
+    display: none;
+}

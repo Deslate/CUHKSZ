@@ -1,0 +1,57 @@
+.protocol-passage{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 60px;
+}
+
+
+.protocol-passage > h4, .protocol-passage > h5, .protocol-passage > h6{
+    text-align: left;
+    width: 100%;
+}
+
+.protocol-passage > ol > li{
+    text-align: left;
+    font-size: 1rem;
+}
+
+
+
+.protocol-para{
+   margin-top: 60px !important;
+   margin-left: 0px !important;
+   text-align: justify;
+   text-indent: 2em;
+   margin-bottom: 0px !important;
+}
+
+.proj-safe-table{
+    align-self: center;
+    margin-top: 40px;
+}
+
+.foldable{
+    margin-top: 20px;
+}
+
+.title-bar{
+    background-color: white;
+    box-shadow: 0px 0px 10px #00000022;
+    padding: 10px;
+    padding-bottom: 5px;
+}
+
+.foldable-content{
+    height: 0;
+    overflow: hidden;
+    transition: all 1s ease;
+    text-align: left;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.MsoNormal{
+    
+}

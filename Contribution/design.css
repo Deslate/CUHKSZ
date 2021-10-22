@@ -1,0 +1,18 @@
+.design-passage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.design-para{
+   margin-top: 60px !important;
+   margin-left: 0px !important;
+   text-align: justify;
+   text-indent: 2em;
+   margin-bottom: 0px !important;
+}
+
+.design-table{
+    align-self: center;
+    margin-top: 40px;
+}

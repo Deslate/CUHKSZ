@@ -1,0 +1,181 @@
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>EthaNO - CUHKSZ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/fontawesome.all.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/igem.fit.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="./design.css" />
+
+    </head>
+
+    <div id="body">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                    <img src="/assets/logo.png" style="width: 50px; margin-bottom: 5px;">
+                    <a href="#" class="navbar-brand ml-3">Etha<span style="color:#3898ff">NO</span></a>
+                </div>
+
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu"
+                    aria-expanded="false" aria-label="Toggle Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse"></div>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/team">Team</a>
+                            <div class="dropdown">
+                                <a href="/pages/team/#members">Members</a>
+                                <a href="/Attribution">Attribution</a>
+                                <a href="/Attribution/#special-thanks">Special Thanks</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/description">Project</a>
+                            <div class="dropdown">
+                                <a href="/pages/description">Description</a>
+                                <a href="/pages/design" >Design</a>
+                                <a href="/pages/wet-lab">Wet Lab</a>
+                                <a href="/pages/dry-lab">Dry Lab</a>
+                                <a href="/pages/material-engineering">Material Engineering</a>
+                                <a href="/Contribution" class="active">Contribution</a>
+                            </div>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/safety">Lab</a>
+                            <div class="dropdown">
+                                <a href="/pages/safety">Safety</a>
+                                <a href="/pages/protocol">Protocol</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/human-practice/#collaboration">Human Practice</a>
+                            <div class="dropdown">
+                                <a href="/pages/human-practice/#collaboration">Collaboration</a>
+                                <a href="/pages/human-practice/#community-engagement">Community Engagement</a>
+                            </div>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+
+            </nav>
+        </header>
+
+        <!-- MAIN PART -->
+        <div id='main'>
+            <div class="container-fluid p-0">
+                <div class="site-content">
+                    <div class="d-flex justify-content-center" style="width: 100%;">
+                        <div class="site-title-container">
+                            <h1 class="site-title" style="width: max-content;">Contribution</h1>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-1">
+                <div class="container text-center design-passage">
+                    
+                    <p class="para-1 design-para">
+                        Due to time limits, we haven’t figured out the exact oxidation mechanism of AdhE and haven’t design a BioBricks based on the mechanism. However, the experimental method as well as the troubleshooting method might be a reference to future teams. Here, we would like to present two points of contribution. 
+                    </p>
+
+                    <span style="font-size: 1.2em; font-weight: bold; max-width: 60%; text-align: left; margin-top: 60px;">
+                        1.	Troubleshooting method during the process of Molecular Dynamics (MD)
+                    </span>
+
+
+                    <p class="para-1 design-para">
+                        The process of preparing the topology of the NAD+ and acetaldehyde itself is quite tedious, it depends on the various tools used by the force field and even some factors like tool version and computer configuration. The different naming rules of molecules used by different software is also a challenge for us. After many failures, we borrowed a server and consulted with our predecessors，we finally obtained the correct topology. However, the MD process were first conducted in a mistaken procedure due to the misconduct as is mentioned in docking part. Due to time limit, the primary MD had only run for 200 picoseconds for the reaction in ALDH domain, which was not long enough to capture a frame that suits the reaction as is proposed in previous literature. The two main problems of the MD trajectory were:
+                        First, the oxidation site of NAD+ was at the opposite of ethanol, which was too distant for the oxidation to occur. Second, the ethanol was not close to a cysteine residue, which should be the nucleophile to attack the carbonyl on aldehyde. It might be the reason either that the docking conformation, though highly ranked, was not the most optimized one for the reaction to occur, or that 200 picoseconds were too short for the reaction to witness a conformational change. We then redo the docking using another pdb file with NAD+ at correct position，and tried several configurations. We choose the most stable one for MD simulation，and set the time to 0.1 s.
+
+                    </p>
+
+                    <span style="font-size: 1.2em; font-weight: bold; max-width: 60%; text-align: left; margin-top: 60px;">
+                        2.	Optimization method of material properties
+                    </span>
+
+                    <p class="para-1 design-para">
+                        <b>Plackett Burman Design</b><br/>
+                        Plackett Burman Design yields unbiased estimates of all main effects in the smallest design possible. They are used to investigate n–1 variables in n experiments proposing experimental designs for more than seven factors and especially for 4n experiments. The main advantage is that there is a minimum number of observations needed to calculate an effect for a certain factor.  
+                    </p>
+
+                    <p class="para-1 design-para">
+                        <b>Uniform Design</b><br/>
+                        Uniform design (UD) is a kind of experimental design method proposed by Prof. Kai-Tai Fang and Prof. Yuan Wang in 1980. In biological experiments, it can be utilized as a type of fractional factorial design, which can simultaneously delete insignificant variables and estimate the coefficients of significant variables.
+                    </p>
+
+                    
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="section-5 text-center">
+                <h4 style="margin-top:5%">Healthier drinking with Etha<span style="color:#3898ff">NO</span></h4>
+                <!-- <h4 class="my-4">If You Need Any Help</h4>
+
+                <div class="form-inline justify-content-center">
+                    <input type="text" name="Email" id="email" placeholder="Enter Email" size="40" class="form-control px-4 py-2">
+                    <input type="button" value="Contact Us" class="btn btn-danger px-4 py-2 ml-2">
+
+                </div> -->
+
+                <div class="social" style="margin:5%">
+                    <div class="d-flex flex-row justify-content-center" style="font-size: 0.8em; margin-right: 40px;">
+                        <div class="d-flex flex-column">
+                            <img src="/assets/email.png" width="100px" style="align-self: center;"/>
+                            st_igemcuhksz@link.cuhk.edu.cn
+                        </div>
+                        
+                        <div class="d-flex flex-column" style="margin-left: 20px;">
+                            <img src="/assets/qrcode.jpeg" width="100px" style="align-self: center;"/>
+                            EthaNO Public Account
+                        </div>
+
+                        <div class="d-flex flex-column" style="margin-left: 40px;">
+                            <img src="/assets/university.png" width="80px" style="align-self: center;"/>
+                            <img src="/assets/lhs.jpeg" width="150px" style="align-self: center;"/>
+                        </div>
+                        
+                    </div>
+                </div>
+                <hr>
+                
+
+
+            </div>
+        </footer>
+
+
+        <script src="/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/scrollreveal.js"></script>
+
+        <script>
+            window.sr = ScrollReveal({duration:1000});
+            sr.reveal('.site-content .d-flex');
+            sr.reveal('.section-1 .card');
+            sr.reveal('.section-2 .d-flex');
+            sr.reveal('.section-3 .col-md-4');
+            sr.reveal('.section-4 .col-md-7, .col-md-5');
+        </script>
+
+    </div>
+
+</html>

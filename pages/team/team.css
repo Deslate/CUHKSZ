@@ -1,0 +1,110 @@
+.team-passage{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 60px;
+}
+
+
+.team-passage > h4, .team-passage > h5, .team-passage > h6{
+    text-align: left;
+    width: 100%;
+}
+
+.team-passage > ol > li{
+    text-align: left;
+    font-size: 1rem;
+}
+
+
+
+.team-para{
+   margin-top: 60px !important;
+   margin-left: 0px !important;
+   text-align: justify;
+   text-indent: 2em;
+   margin-bottom: 0px !important;
+}
+
+.proj-safe-table{
+    align-self: center;
+    margin-top: 40px;
+}
+
+.team-special-thanks-heading{
+    margin-top: 60px;
+}
+
+.team-special-thanks{
+    line-height: 3rem;
+}
+
+.member-grid{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.member-grid-item__wrapper{
+    margin: 10px;
+    margin-bottom: 60px;
+    width: calc(25% - 20px);
+    min-width: 240px;
+    height: 330px;
+    max-height: 330px;
+    background-color: white !important;
+}
+
+.member-grid-item{
+    width: 100%;
+    transition: all 1s;
+    background-color: white !important;
+    padding-bottom: 0px;
+}
+
+.member-grid-item > img {
+    width: 100%;
+    height: 295px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    background-color: white !important;
+}
+
+.member-grid-item__name{
+    margin-bottom: 0px;
+}
+
+.member-grid-item__intro{
+    height: 0px;
+    opacity: 0;
+    transition: all 1s ease;
+    background-color: white;
+    overflow-y: scroll;
+    background-color: white !important;
+    text-align: left;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.member-grid-item__intro::-webkit-scrollbar{
+    width: 0px;
+}
+
+.member-grid-item:hover {
+    box-shadow: 0px 0px 20px #00000033;
+    background-color: white !important;
+    z-index: 999;
+}
+
+.member-grid-item:hover .member-grid-item__intro{
+    opacity: 1;
+    height: 300px;
+    background-color: white !important;
+}
+
+.member-grid-item__intro > b {
+    padding-top: 20px;
+}
+
+.team-passage > h3 {
+    text-align: left;
+}

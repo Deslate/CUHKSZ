@@ -1,0 +1,219 @@
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>EthaNO - CUHKSZ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/fontawesome.all.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/igem.fit.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="./dry-lab.css" />
+
+    </head>
+
+    <div id="body">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                    <img src="/assets/logo.png" style="width: 50px; margin-bottom: 5px;">
+                    <a href="#" class="navbar-brand ml-3">Etha<span style="color:#3898ff">NO</span></a>
+                </div>
+
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu"
+                    aria-expanded="false" aria-label="Toggle Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse"></div>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/team">Team</a>
+                            <div class="dropdown">
+                                <a href="/pages/team/#members">Members</a>
+                                <a href="/Attribution">Attribution</a>
+                                <a href="/Attribution/#special-thanks">Special Thanks</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/description">Project</a>
+                            <div class="dropdown">
+                                <a href="/pages/description">Description</a>
+                                <a href="/pages/design">Design</a>
+                                <a href="/pages/wet-lab">Wet Lab</a>
+                                <a href="/pages/dry-lab" class="active">Dry Lab</a>
+                                <a href="/pages/material-engineering">Material Engineering</a>
+                                <a href="/Contribution">Contribution</a>
+                            </div>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/safety">Lab</a>
+                            <div class="dropdown">
+                                <a href="/pages/safety">Safety</a>
+                                <a href="/pages/protocol">Protocol</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/human-practice/#collaboration">Human Practice</a>
+                            <div class="dropdown">
+                                <a href="/pages/human-practice/#collaboration">Collaboration</a>
+                                <a href="/pages/human-practice/#community-engagement">Community Engagement</a>
+                            </div>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+
+            </nav>
+        </header>
+
+        <!-- MAIN PART -->
+        <div id='main'>
+            <div class="container-fluid p-0">
+                <div class="site-content">
+                    <div class="d-flex justify-content-center" style="width: 100%;">
+                        <div class="site-title-container">
+                            <h1 class="site-title" style="width: max-content;">Dry Lab</h1>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-1">
+                <div class="container text-center design-passage">
+
+                    <h2 style="margin-top: 60px; margin-bottom: 0px;">Docking</h2>
+                    
+                    <p class="para-1 design-para" style="text-indent: 0px;">
+                        We first tried to dock the cofactors and the ligands to their domains respectively, 
+                        namely NAD+ and ethanol to ADH domain, and NAD+ and aldehyde to ADLH domain. However, 
+                        in the initial trial, we mistook the whole tetramer structure of the enzyme for docking, 
+                        which caused NAD+ and ligand to be separated into site within distant monomers. 
+                        After revising the technical misconducts, we docked in the order of “first NAD+ then ligand” 
+                        to their domain respectively in their monomer. This generated several possible conformations. 
+                        Here we first chose the conformation with the highest rank for the following process.
+                    </p>
+
+
+                    <p class="para-1 design-para" style="text-indent: 0px;">
+                        However, further investigation could be done on the other conformations that ranked after the first. 
+                        These conformations would also undergo molecular dynamics simulation to discover which to be a proper conformation.
+                    </p>
+
+                    <img src="/assets/image19.png" style="width: 50%; margin-top: 40px;" />
+
+                    <h2 style="margin-top: 60px; margin-bottom: 0px;">Molecular Dynamics (MD)</h2>
+
+                    <p class="para-1 design-para" style="text-indent: 0px;">
+                        The MD process were first conducted in a mistaken procedure due to the misconduct as is mentioned in docking part. 
+                        Due to time limit, the primary MD had only run for 200 picoseconds for the reaction in ALDH domain, 
+                        which was not long enough to capture a frame that suits the reaction as is proposed in previous literature. 
+                        The two main problems of the MD trajectory were: First, the oxidation site of NAD+ was at the opposite of ethanol, 
+                        which was too distant for the oxidation to occur. Second, the ethanol was not close to a cysteine residue, 
+                        which should be the nuclearphile to attack the carbonyl on aldehyde. 
+                        It might be the reason either that the docking conformation, 
+                        though highly ranked, was not the most optimized one for the reaction to occur, 
+                        or that 200 picoseconds were too short for the reaction to witness a conformational change.
+                    </p>
+
+                    <img src="/assets/image20.png" style="width: 60%; margin-top: 40px;" />
+
+
+                    <p class="para-1 design-para">
+                        However, the MD result also provided new insight into the mechanism. 
+                        Instead of moving around the cysteine residue, 
+                        the aldehyde were moving around a methionine residue. 
+                        This indicated the sulfur on methionine had the probability of being the nuclearphile to attack aldehyde. 
+                        Based on this discovery, we moved on to quantum chemistry calculations parallel to extra 
+                        MD processing on other possible conformations from docking.
+                    </p>
+
+                    <img src="/assets/image21.png" style="width: 60%; margin-top: 40px;" />
+
+                    <img src="/assets/image22.png" style="width: 60%; margin-top: 40px;" />
+
+
+
+                    <h2 style="margin-top: 60px; margin-bottom: 0px;">Molecular Dynamics (MD)</h2>
+
+                    <p class="para-1 design-para">
+                        At the first stage of QM, the optimization of the clustered frame from MD turned out to be compelling. 
+                        Although it might be the reason that clustered structure lacked residue to resist the movement of NAD+, 
+                        NAD+ in fact bent itself turned its oxidative site towards aldehyde. 
+                        This discovery could support the mechanism proposed by ourselves, 
+                        and need further justification of whether the NAD+ would also bend inside the enzyme and why.
+                    </p>
+
+                    <img src="/assets/image23.png" style="width: 30%; margin-top: 40px;" />
+                    <img src="/assets/image24.png" style="width: 45%; margin-top: 40px;" />
+
+                    
+
+                    
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="section-5 text-center">
+                <h4 style="margin-top:5%">Healthier drinking with Etha<span style="color:#3898ff">NO</span></h4>
+                <!-- <h4 class="my-4">If You Need Any Help</h4>
+
+                <div class="form-inline justify-content-center">
+                    <input type="text" name="Email" id="email" placeholder="Enter Email" size="40" class="form-control px-4 py-2">
+                    <input type="button" value="Contact Us" class="btn btn-danger px-4 py-2 ml-2">
+
+                </div> -->
+
+                <div class="social" style="margin:5%">
+                    <div class="d-flex flex-row justify-content-center" style="font-size: 0.8em; margin-right: 40px;">
+                        <div class="d-flex flex-column">
+                            <img src="/assets/email.png" width="100px" style="align-self: center;"/>
+                            st_igemcuhksz@link.cuhk.edu.cn
+                        </div>
+                        
+                        <div class="d-flex flex-column" style="margin-left: 20px;">
+                            <img src="/assets/qrcode.jpeg" width="100px" style="align-self: center;"/>
+                            EthaNO Public Account
+                        </div>
+
+                        <div class="d-flex flex-column" style="margin-left: 40px;">
+                            <img src="/assets/university.png" width="80px" style="align-self: center;"/>
+                            <img src="/assets/lhs.jpeg" width="150px" style="align-self: center;"/>
+                        </div>
+                        
+                    </div>
+                </div>
+                <hr>
+                
+
+
+            </div>
+        </footer>
+
+
+        <script src="/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/scrollreveal.js"></script>
+
+        <script>
+            window.sr = ScrollReveal({duration:1000});
+            sr.reveal('.site-content .d-flex');
+            sr.reveal('.section-1 .card');
+            sr.reveal('.section-2 .d-flex');
+            sr.reveal('.section-3 .col-md-4');
+            sr.reveal('.section-4 .col-md-7, .col-md-5');
+        </script>
+
+    </div>
+
+</html>
