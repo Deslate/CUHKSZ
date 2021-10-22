@@ -7,7 +7,7 @@
         <link href="https://2021.igem.org/Template:CUHKSZ/css/fontawesome-allCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
         <link href="https://2021.igem.org/Template:CUHKSZ/css/mainCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
         <link href="https://2021.igem.org/Template:CUHKSZ/css/igem-fitCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
-        <link href="https://2021.igem.org/Template:CUHKSZ/pages/design/designCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="https://2021.igem.org/Template:CUHKSZ/Contribution/designCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
 
     </head>
 
@@ -33,19 +33,19 @@
                             <a class="nav-link" href="https://2021.igem.org/Team:CUHKSZ/pages/team">Team</a>
                             <div class="dropdown">
                                 <a href="https://2021.igem.org/Team:CUHKSZ/pages/team">Members</a>
-                                <a href="https://2021.igem.org/Team:CUHKSZ/Attributions">Attribution</a>
-                                <a href="https://2021.igem.org/Team:CUHKSZ/Attributions">Special Thanks</a>
+                                <a href="https://2021.igem.org/Team:CUHKSZ/Attribution">Attribution</a>
+                                <a href="https://2021.igem.org/Team:CUHKSZ/Attribution/#special-thanks">Special Thanks</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://2021.igem.org/Team:CUHKSZ/Description">Project</a>
+                            <a class="nav-link" href="https://2021.igem.org/Team:CUHKSZ/pages/description">Project</a>
                             <div class="dropdown">
-                                <a href="https://2021.igem.org/Team:CUHKSZ/Description">Description</a>
-                                <a class="active" href="https://2021.igem.org/Team:CUHKSZ/pages/design">Design</a>
+                                <a href="https://2021.igem.org/Team:CUHKSZ/pages/description">Description</a>
+                                <a href="https://2021.igem.org/Team:CUHKSZ/pages/design">Design</a>
                                 <a href="https://2021.igem.org/Team:CUHKSZ/pages/wet-lab">Wet Lab</a>
                                 <a href="https://2021.igem.org/Team:CUHKSZ/pages/dry-lab">Dry Lab</a>
                                 <a href="https://2021.igem.org/Team:CUHKSZ/pages/material-engineering">Material Engineering</a>
-                                <a href="https://2021.igem.org/Team:CUHKSZ/Contribution">Contribution</a>
+                                <a class="active" href="https://2021.igem.org/Team:CUHKSZ/Contribution">Contribution</a>
                             </div>
                         </li>
                         
@@ -77,7 +77,7 @@
                 <div class="site-content">
                     <div class="d-flex justify-content-center" style="width: 100%;">
                         <div class="site-title-container">
-                            <h1 class="site-title" style="width: max-content;">Design</h1>
+                            <h1 class="site-title" style="width: max-content;">Contribution</h1>
                             
                         </div>
                     </div>
@@ -88,78 +88,32 @@
                 <div class="container text-center design-passage">
                     
                     <p class="para-1 design-para">
-                        To achieve the goal of decomposing the ethanol within the drink without disturbing other
-                        components or releasing irrelevant substances, 
-                        there are two factors to consider: 
-                        First, what would be the space for ethanol to be isolated from other components 
-                        for the convenience of decomposition? Second, what would be the strategy 
-                        to decompose ethanol into harmless metabolites, if possibly water and carbon dioxide?
+                        Due to time limits, we haven’t figured out the exact oxidation mechanism of AdhE and haven’t design a BioBricks based on the mechanism. However, the experimental method as well as the troubleshooting method might be a reference to future teams. Here, we would like to present two points of contribution. 
                     </p>
+
+                    <span style="font-size: 1.2em; font-weight: bold; max-width: 60%; text-align: left; margin-top: 60px;">
+                        1.	Troubleshooting method during the process of Molecular Dynamics (MD)
+                    </span>
 
 
                     <p class="para-1 design-para">
-                        As for the container where the isolated metabolism occurs, 
-                        it is designed to control the inflow of small particles like 
-                        ethanol so that large irrelevant components are blocked and 
-                        that ethanol can be removed at a constant rate without accumulating 
-                        in the container to suppress the metabolizing cells. 
-                        The membrane of the container we are supposed to use 
-                        is Osmosis Membrane. More specifically, ultrafiltration 
-                        (UF) membrane with pore diameter of about 10 nm should be used 
-                        (DH2O=2.8 nm, DEt=4.4 nm). Further tests should be conducted if 
-                        rate control is necessary for ethanol concentration balance.
-                         Within the container, there is embedded material used for bacteria immobilization. 
-                         The most widely used way is SA+PVA embedding, which currently enables 
-                         a maximum bacteria concentration of around 15~20 g/L. The problem 
-                         is that the ethanol degradation rate under this concentration requires 
-                         further improvement to be applicable in our final production.
+                        The process of preparing the topology of the NAD+ and acetaldehyde itself is quite tedious, it depends on the various tools used by the force field and even some factors like tool version and computer configuration. The different naming rules of molecules used by different software is also a challenge for us. After many failures, we borrowed a server and consulted with our predecessors，we finally obtained the correct topology. However, the MD process were first conducted in a mistaken procedure due to the misconduct as is mentioned in docking part. Due to time limit, the primary MD had only run for 200 picoseconds for the reaction in ALDH domain, which was not long enough to capture a frame that suits the reaction as is proposed in previous literature. The two main problems of the MD trajectory were:
+                        First, the oxidation site of NAD+ was at the opposite of ethanol, which was too distant for the oxidation to occur. Second, the ethanol was not close to a cysteine residue, which should be the nucleophile to attack the carbonyl on aldehyde. It might be the reason either that the docking conformation, though highly ranked, was not the most optimized one for the reaction to occur, or that 200 picoseconds were too short for the reaction to witness a conformational change. We then redo the docking using another pdb file with NAD+ at correct position，and tried several configurations. We choose the most stable one for MD simulation，and set the time to 0.1 s.
+
+                    </p>
+
+                    <span style="font-size: 1.2em; font-weight: bold; max-width: 60%; text-align: left; margin-top: 60px;">
+                        2.	Optimization method of material properties
+                    </span>
+
+                    <p class="para-1 design-para">
+                        <b>Plackett Burman Design</b><br/>
+                        Plackett Burman Design yields unbiased estimates of all main effects in the smallest design possible. They are used to investigate n–1 variables in n experiments proposing experimental designs for more than seven factors and especially for 4n experiments. The main advantage is that there is a minimum number of observations needed to calculate an effect for a certain factor.  
                     </p>
 
                     <p class="para-1 design-para">
-                        On the basis of an isolated container for the reaction, 
-                        the strategy mainly focuses on the use of a bifunctional 
-                        hydrogenase named AdhE. The enzyme, 
-                        AdhE catalyzes the oxidation of ethanol to acetaldehyde and 
-                        further to acetic acid in an NAD+ and CoA dependent way. 
-                        Noticeably, in the presence of coenzyme A, 
-                        the reactivity of AdhE will be greatly improved. 
-                        However, if the metabolism merely arrests at acetic acid production, 
-                        the released acetic acid with a strong vinegar-like odor will spoil 
-                        the flavor of alcoholic drink. To improve the situation, four plans are developed.
-                    </p>
-
-                    <table border="1" class="design-table">
-                        <tbody><tr>
-                          <td></td>
-                          <td>Coculture</td>
-                          <td>Do not Coculture</td>
-                        </tr>
-                        <tr>
-                          <td>Modity AdhE</td>
-                          <td>I</td>
-                          <td>II (Most Workload)</td>
-                        </tr>
-                        <tr>
-                            <td>Do not modity AdhE</td>
-                            <td>III (Least workload)</td>
-                            <td>IV</td>
-                          </tr>
-                    </tbody></table>
-
-                    <p class="para-1 design-para">
-                        As is summarized above, on the digestion of acetic acids, 
-                        in the coculturing case, the released acetic acids could be further metabolized by acetic 
-                        acid bacteria. Meanwhile, 
-                        in the no coculturing case,  it would have to raise the concentration of CoA in E. coli, 
-                        which is yet far above the possible workload. Considering to improve the metabolic 
-                        rate of the enzyme AdhE, we eventually choose the strategy of transforming E. 
-                        coli with modified AdhE but not coculturing with acetic acid bacteria, namely strategy III.
-                    </p>
-
-                    <p class="para-1 design-para">
-                        In summary, our design is basically a container with membrane osmosis rate control and substance
-                         for cell fixation, where the ethanol that flows into cell is metabolized through 
-                         E. coli transformed with modified AdhE and cocultured with acetic acid bacteria.
+                        <b>Uniform Design</b><br/>
+                        Uniform design (UD) is a kind of experimental design method proposed by Prof. Kai-Tai Fang and Prof. Yuan Wang in 1980. In biological experiments, it can be utilized as a type of fractional factorial design, which can simultaneously delete insignificant variables and estimate the coefficients of significant variables.
                     </p>
 
                     
