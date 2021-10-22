@@ -7,7 +7,7 @@
         <link href="https://2021.igem.org/Template:CUHKSZ/css/fontawesome-allCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
         <link href="https://2021.igem.org/Template:CUHKSZ/css/mainCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
         <link href="https://2021.igem.org/Template:CUHKSZ/css/igem-fitCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
-        <link href="https://2021.igem.org/Template:CUHKSZ/pages/design/designCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="https://2021.igem.org/Template:CUHKSZ/Attributions/designCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
 
     </head>
 
@@ -33,7 +33,7 @@
                             <a class="nav-link" href="https://2021.igem.org/Team:CUHKSZ/pages/team">Team</a>
                             <div class="dropdown">
                                 <a href="https://2021.igem.org/Team:CUHKSZ/pages/team">Members</a>
-                                <a href="https://2021.igem.org/Team:CUHKSZ/Attributions">Attribution</a>
+                                <a class="active" href="https://2021.igem.org/Team:CUHKSZ/Attributions">Attribution</a>
                                 <a href="https://2021.igem.org/Team:CUHKSZ/Attributions">Special Thanks</a>
                             </div>
                         </li>
@@ -41,7 +41,7 @@
                             <a class="nav-link" href="https://2021.igem.org/Team:CUHKSZ/Description">Project</a>
                             <div class="dropdown">
                                 <a href="https://2021.igem.org/Team:CUHKSZ/Description">Description</a>
-                                <a class="active" href="https://2021.igem.org/Team:CUHKSZ/pages/design">Design</a>
+                                <a href="https://2021.igem.org/Team:CUHKSZ/pages/design">Design</a>
                                 <a href="https://2021.igem.org/Team:CUHKSZ/pages/wet-lab">Wet Lab</a>
                                 <a href="https://2021.igem.org/Team:CUHKSZ/pages/dry-lab">Dry Lab</a>
                                 <a href="https://2021.igem.org/Team:CUHKSZ/pages/material-engineering">Material Engineering</a>
@@ -77,7 +77,7 @@
                 <div class="site-content">
                     <div class="d-flex justify-content-center" style="width: 100%;">
                         <div class="site-title-container">
-                            <h1 class="site-title" style="width: max-content;">Design</h1>
+                            <h1 class="site-title" style="width: max-content;">Attribution</h1>
                             
                         </div>
                     </div>
@@ -86,83 +86,70 @@
 
             <div class="section-1">
                 <div class="container text-center design-passage">
+
+                    <h2>Wet Lab</h2>
                     
                     <p class="para-1 design-para">
-                        To achieve the goal of decomposing the ethanol within the drink without disturbing other
-                        components or releasing irrelevant substances, 
-                        there are two factors to consider: 
-                        First, what would be the space for ethanol to be isolated from other components 
-                        for the convenience of decomposition? Second, what would be the strategy 
-                        to decompose ethanol into harmless metabolites, if possibly water and carbon dioxide?
+                        <b>Members:</b> Yifan Chen, Zi Wang, Xiaoting Liu, Shunyu Huang <br/>
+                        <span style="font-size: 0.96em;"><b>Instructors:</b>Liping Li, Xiaoxuan Cai, Yueyang Xie, Dr. Lin Yangchidung, Dr. Jenny Ni</span>
+
                     </p>
 
 
-                    <p class="para-1 design-para">
-                        As for the container where the isolated metabolism occurs, 
-                        it is designed to control the inflow of small particles like 
-                        ethanol so that large irrelevant components are blocked and 
-                        that ethanol can be removed at a constant rate without accumulating 
-                        in the container to suppress the metabolizing cells. 
-                        The membrane of the container we are supposed to use 
-                        is Osmosis Membrane. More specifically, ultrafiltration 
-                        (UF) membrane with pore diameter of about 10 nm should be used 
-                        (DH2O=2.8 nm, DEt=4.4 nm). Further tests should be conducted if 
-                        rate control is necessary for ethanol concentration balance.
-                         Within the container, there is embedded material used for bacteria immobilization. 
-                         The most widely used way is SA+PVA embedding, which currently enables 
-                         a maximum bacteria concentration of around 15~20 g/L. The problem 
-                         is that the ethanol degradation rate under this concentration requires 
-                         further improvement to be applicable in our final production.
-                    </p>
-
-                    <p class="para-1 design-para">
-                        On the basis of an isolated container for the reaction, 
-                        the strategy mainly focuses on the use of a bifunctional 
-                        hydrogenase named AdhE. The enzyme, 
-                        AdhE catalyzes the oxidation of ethanol to acetaldehyde and 
-                        further to acetic acid in an NAD+ and CoA dependent way. 
-                        Noticeably, in the presence of coenzyme A, 
-                        the reactivity of AdhE will be greatly improved. 
-                        However, if the metabolism merely arrests at acetic acid production, 
-                        the released acetic acid with a strong vinegar-like odor will spoil 
-                        the flavor of alcoholic drink. To improve the situation, four plans are developed.
-                    </p>
-
-                    <table border="1" class="design-table">
-                        <tbody><tr>
-                          <td></td>
-                          <td>Coculture</td>
-                          <td>Do not Coculture</td>
-                        </tr>
-                        <tr>
-                          <td>Modity AdhE</td>
-                          <td>I</td>
-                          <td>II (Most Workload)</td>
-                        </tr>
-                        <tr>
-                            <td>Do not modity AdhE</td>
-                            <td>III (Least workload)</td>
-                            <td>IV</td>
-                          </tr>
-                    </tbody></table>
-
-                    <p class="para-1 design-para">
-                        As is summarized above, on the digestion of acetic acids, 
-                        in the coculturing case, the released acetic acids could be further metabolized by acetic 
-                        acid bacteria. Meanwhile, 
-                        in the no coculturing case,  it would have to raise the concentration of CoA in E. coli, 
-                        which is yet far above the possible workload. Considering to improve the metabolic 
-                        rate of the enzyme AdhE, we eventually choose the strategy of transforming E. 
-                        coli with modified AdhE but not coculturing with acetic acid bacteria, namely strategy III.
-                    </p>
-
-                    <p class="para-1 design-para">
-                        In summary, our design is basically a container with membrane osmosis rate control and substance
-                         for cell fixation, where the ethanol that flows into cell is metabolized through 
-                         E. coli transformed with modified AdhE and cocultured with acetic acid bacteria.
-                    </p>
-
+                    <h2>Dry Lab</h2>
                     
+                    <p class="para-1 design-para">
+                        <b>Organizers:</b> Junlong He, Shiyu He, Lingxi Ji <br/>
+                        <b>Participants:</b> Chenjie Ye, Tianqi Wu, Yuqi Huang, Xiaoting Liu, Andre Lecona Buttelli, Kaiyou Wu, Xinyi Chen,<br/>
+                        <b>Instructors:</b> Prof. Huang Hsienda, Prof. Lee Tzongyi, Prof. Chiang Ying-Chih, Prof. Cheng Guijuan, Dr. Lin Yangchidung
+                    </p>
+
+                    <h2>Material</h2>
+                    
+                    <p class="para-1 design-para">
+                        <b>Members:</b> Chenjie Ye, Tianqi Wu, Yuqi Huang, Kaiyou Wu <br/>
+                        <b>Instructors:</b> Prof. Zhang Qi, Dr. Lin Yangchidung, Dr. Jenny Ni, Liping Li, Xiaoxuan Cai, Yueyang Xie
+                    </p>
+
+                    <h2>Promotion Video</h2>
+
+                    <p class="para-1 design-para">
+                        <b>Organizer:</b> Lingxi Ji, Runbo Mao, Tianqi Wu, Yifan Chen<br/>
+                        <b>Animation:</b> Lingxi Ji, Runbo Mao, Shiyu He, Shunyu Huang, Xiaoting Liu, Yifan Chen<br/>
+                        <b>Script:</b> Shunyu Huang, Tianqi Wu, Yifan Chen<br/>
+                        <b>Editor:</b> Runbo Mao, Lingxi Ji<br/>
+                        <b>Photographer:</b> Runbo Mao<br/>
+                        <b>Cast:</b> Chenjie Ye, Kaiyou Wu, Shunyu Huang, Tianqi Wu, Yuqi Huang, Zi Wang<br/><br/>
+                        <b>Special thanks to:</b><a name="special-thanks"></a><br/>
+                        Communications and Public Relations Office of CUHK, Shenzhen<br/>
+                        The Voice of Deer Dubbing Club<br/>
+                        Mr. Yuchen Jin<br/>
+                        Mr. Wenzhe Xiao
+                    </p>
+
+                    <h2>Human Practice</h2>
+
+                    <p class="para-1 design-para">
+                        <b>Organizer:</b> Prof. Hsien-Da Huang, Tianqi Wu, Yifan Chen, Junlong He, Chenjie Ye, Shunyu Huang, Xiaoting Liu, Andre Lecona Buttelli<br/>
+                        <b>Special thanks to:</b> Team NCTU_Formosa, School of Life and Health Sciences of CUHK, Shenzhen
+                    </p>
+
+                    <h2>Wiki</h2>
+
+                    <p class="para-1 design-para">
+                        <b>Website Designer:</b> Haowen Yang<br/>
+                        <b>Art Design:</b> Kaiyou Wu, Yifan Chen<br/>
+                        <b>Members:</b> Tianqi Wu, Yifan Chen, Junlong He, Chenjie Ye, Zi Wang, Shunyu Huang, Andre Lecona Buttelli
+                    </p>
+
+                    <h2>Wiki</h2>
+
+                    <p class="para-1 design-para">
+                        <b>Organizer:</b> Lingxi Ji, Tianqi Wu, Yifan Chen, Junlong He, Chenjie Ye, Zi Wang<br/>
+                        <b>Editor:</b> Lingxi Ji<br/>
+                        <b>Photographer:</b> Lingxi Ji<br/>
+                        <b>Cast:</b> Lingxi Ji, Chenjie Ye, Shunyu Huang, Yuqi Huang, Tianqi Wu, Zi Wang, Shunyu Huang, Xiaoting Liu, Junlong He, Shiyu He
+                    </p>
 
         </div>
 

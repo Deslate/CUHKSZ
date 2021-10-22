@@ -7,7 +7,7 @@
         <link href="https://2021.igem.org/Template:CUHKSZ/css/fontawesome-allCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
         <link href="https://2021.igem.org/Template:CUHKSZ/css/mainCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
         <link href="https://2021.igem.org/Template:CUHKSZ/css/igem-fitCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
-        <link href="https://2021.igem.org/Template:CUHKSZ/pages/design/designCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="https://2021.igem.org/Template:CUHKSZ/pages/description/designCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
 
     </head>
 
@@ -29,19 +29,19 @@
                         <li class="nav-item">
                             <a class="nav-link" href="https://2021.igem.org/Team:CUHKSZ">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="https://2021.igem.org/Team:CUHKSZ/pages/team">Team</a>
                             <div class="dropdown">
                                 <a href="https://2021.igem.org/Team:CUHKSZ/pages/team">Members</a>
-                                <a href="https://2021.igem.org/Team:CUHKSZ/Attributions">Attribution</a>
-                                <a href="https://2021.igem.org/Team:CUHKSZ/Attributions">Special Thanks</a>
+                                <a href="https://2021.igem.org/Team:CUHKSZ/Attribution">Attribution</a>
+                                <a href="https://2021.igem.org/Team:CUHKSZ/Attribution/#special-thanks">Special Thanks</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://2021.igem.org/Team:CUHKSZ/Description">Project</a>
+                            <a class="nav-link" href="https://2021.igem.org/Team:CUHKSZ/pages/description">Project</a>
                             <div class="dropdown">
-                                <a href="https://2021.igem.org/Team:CUHKSZ/Description">Description</a>
-                                <a class="active" href="https://2021.igem.org/Team:CUHKSZ/pages/design">Design</a>
+                                <a class="active" href="https://2021.igem.org/Team:CUHKSZ/pages/description">Description</a>
+                                <a href="https://2021.igem.org/Team:CUHKSZ/pages/design">Design</a>
                                 <a href="https://2021.igem.org/Team:CUHKSZ/pages/wet-lab">Wet Lab</a>
                                 <a href="https://2021.igem.org/Team:CUHKSZ/pages/dry-lab">Dry Lab</a>
                                 <a href="https://2021.igem.org/Team:CUHKSZ/pages/material-engineering">Material Engineering</a>
@@ -77,7 +77,7 @@
                 <div class="site-content">
                     <div class="d-flex justify-content-center" style="width: 100%;">
                         <div class="site-title-container">
-                            <h1 class="site-title" style="width: max-content;">Design</h1>
+                            <h1 class="site-title" style="width: max-content;">Description</h1>
                             
                         </div>
                     </div>
@@ -88,78 +88,12 @@
                 <div class="container text-center design-passage">
                     
                     <p class="para-1 design-para">
-                        To achieve the goal of decomposing the ethanol within the drink without disturbing other
-                        components or releasing irrelevant substances, 
-                        there are two factors to consider: 
-                        First, what would be the space for ethanol to be isolated from other components 
-                        for the convenience of decomposition? Second, what would be the strategy 
-                        to decompose ethanol into harmless metabolites, if possibly water and carbon dioxide?
+                        Drinking is an essential part of people's social life around the world. China also has profound history and culture of liquor. About 3,000 years ago, the Chinese began to make a large quantity of liquor. Liquor permeates almost all aspects of Chinese culture such as literature and health care. Among all the Chinese liquor, Maotai is the most famous one. It has special flavor produced by 4-Ethylguaiacol. Despite the flavor, it also contains some ingredients that is beneficial to human health. Ethyl linoleate in Maotai can boost immunity and reduce serum cholesterol. However, high concentration of ethanol in such liquor can be harmful. Alcohol affects the functions of brain, heart, liver, and it can lead to Asian flush and several types of cancer.
                     </p>
 
 
                     <p class="para-1 design-para">
-                        As for the container where the isolated metabolism occurs, 
-                        it is designed to control the inflow of small particles like 
-                        ethanol so that large irrelevant components are blocked and 
-                        that ethanol can be removed at a constant rate without accumulating 
-                        in the container to suppress the metabolizing cells. 
-                        The membrane of the container we are supposed to use 
-                        is Osmosis Membrane. More specifically, ultrafiltration 
-                        (UF) membrane with pore diameter of about 10 nm should be used 
-                        (DH2O=2.8 nm, DEt=4.4 nm). Further tests should be conducted if 
-                        rate control is necessary for ethanol concentration balance.
-                         Within the container, there is embedded material used for bacteria immobilization. 
-                         The most widely used way is SA+PVA embedding, which currently enables 
-                         a maximum bacteria concentration of around 15~20 g/L. The problem 
-                         is that the ethanol degradation rate under this concentration requires 
-                         further improvement to be applicable in our final production.
-                    </p>
-
-                    <p class="para-1 design-para">
-                        On the basis of an isolated container for the reaction, 
-                        the strategy mainly focuses on the use of a bifunctional 
-                        hydrogenase named AdhE. The enzyme, 
-                        AdhE catalyzes the oxidation of ethanol to acetaldehyde and 
-                        further to acetic acid in an NAD+ and CoA dependent way. 
-                        Noticeably, in the presence of coenzyme A, 
-                        the reactivity of AdhE will be greatly improved. 
-                        However, if the metabolism merely arrests at acetic acid production, 
-                        the released acetic acid with a strong vinegar-like odor will spoil 
-                        the flavor of alcoholic drink. To improve the situation, four plans are developed.
-                    </p>
-
-                    <table border="1" class="design-table">
-                        <tbody><tr>
-                          <td></td>
-                          <td>Coculture</td>
-                          <td>Do not Coculture</td>
-                        </tr>
-                        <tr>
-                          <td>Modity AdhE</td>
-                          <td>I</td>
-                          <td>II (Most Workload)</td>
-                        </tr>
-                        <tr>
-                            <td>Do not modity AdhE</td>
-                            <td>III (Least workload)</td>
-                            <td>IV</td>
-                          </tr>
-                    </tbody></table>
-
-                    <p class="para-1 design-para">
-                        As is summarized above, on the digestion of acetic acids, 
-                        in the coculturing case, the released acetic acids could be further metabolized by acetic 
-                        acid bacteria. Meanwhile, 
-                        in the no coculturing case,  it would have to raise the concentration of CoA in E. coli, 
-                        which is yet far above the possible workload. Considering to improve the metabolic 
-                        rate of the enzyme AdhE, we eventually choose the strategy of transforming E. 
-                        coli with modified AdhE but not coculturing with acetic acid bacteria, namely strategy III.
-                    </p>
-
-                    <p class="para-1 design-para">
-                        In summary, our design is basically a container with membrane osmosis rate control and substance
-                         for cell fixation, where the ethanol that flows into cell is metabolized through 
-                         E. coli transformed with modified AdhE and cocultured with acetic acid bacteria.
+                        Therefore, our team CUHKSZ wants to design a biological device that can decompose the ethanol in alcoholic drinks, including modifying a bacterium to make it decompose the ethanol rapidly, as well as construct a container for the bacteria. By dipping the device into liquor, people can easily enjoy the drink and benefit from its healthy ingredients without worrying about the health risks.
                     </p>
 
                     
