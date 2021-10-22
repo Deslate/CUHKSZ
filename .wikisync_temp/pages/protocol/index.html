@@ -1,0 +1,1578 @@
+<html><head>
+        <meta charset="utf-8"/>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <title>EthaNO - CUHKSZ</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <link href="https://2021.igem.org/Template:CUHKSZ/css/bootstrap-minCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="https://2021.igem.org/Template:CUHKSZ/css/fontawesome-allCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="https://2021.igem.org/Template:CUHKSZ/css/mainCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="https://2021.igem.org/Template:CUHKSZ/css/igem-fitCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="https://2021.igem.org/Template:CUHKSZ/pages/protocol/protocolCSS?action=raw&amp;ctype=text/css" media="screen" rel="stylesheet" type="text/css"/>
+
+    </head>
+
+    <body><div id="body">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                    <img src="https://2021.igem.org/wiki/images/f/f9/T--CUHKSZ--logo.png" style="width: 50px; margin-bottom: 5px;"/>
+                    <a class="navbar-brand ml-3" href="#">Etha<span style="color:#3898ff">NO</span></a>
+                </div>
+
+
+                <button aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle Navigation" class="navbar-toggler" data-target="#navbarMenu" data-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse"></div>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://2021.igem.org/Team:CUHKSZ">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://2021.igem.org/Team:CUHKSZ/pages/team">Team</a>
+                            <div class="dropdown">
+                                <a href="https://2021.igem.org/Team:CUHKSZ/pages/team/#members">Members</a>
+                                <a href="https://2021.igem.org/Team:CUHKSZ/Attribution">Attribution</a>
+                                <a href="https://2021.igem.org/Team:CUHKSZ/Attribution/#special-thanks">Special Thanks</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://2021.igem.org/Team:CUHKSZ/pages/description">Project</a>
+                            <div class="dropdown">
+                                <a href="https://2021.igem.org/Team:CUHKSZ/pages/description">Description</a>
+                                <a href="https://2021.igem.org/Team:CUHKSZ/pages/design">Design</a>
+                                <a href="https://2021.igem.org/Team:CUHKSZ/pages/wet-lab">Wet Lab</a>
+                                <a href="https://2021.igem.org/Team:CUHKSZ/pages/dry-lab">Dry Lab</a>
+                                <a href="https://2021.igem.org/Team:CUHKSZ/pages/material-engineering">Material Engineering</a>
+                                <a href="https://2021.igem.org/Team:CUHKSZ/Contribution">Contribution</a>
+                            </div>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://2021.igem.org/Team:CUHKSZ/pages/safety">Lab</a>
+                            <div class="dropdown">
+                                <a href="https://2021.igem.org/Team:CUHKSZ/pages/safety">Safety</a>
+                                <a href="https://2021.igem.org/Team:CUHKSZ/pages/protocol">Protocol</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://2021.igem.org/Team:CUHKSZ/pages/human-practice/#collaboration">Human Practice</a>
+                            <div class="dropdown">
+                                <a href="https://2021.igem.org/Team:CUHKSZ/pages/human-practice/#collaboration">Collaboration</a>
+                                <a href="https://2021.igem.org/Team:CUHKSZ/pages/human-practice/#community-engagement">Community Engagement</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </nav>
+        </header>
+
+        <!-- MAIN PART -->
+        <div id="main">
+            <div class="container-fluid p-0">
+                <div class="site-content">
+                    <div class="d-flex justify-content-center" style="width: 100%;">
+                        <div class="site-title-container">
+                            <h1 class="site-title" style="width: max-content;">Protocol</h1>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-1">
+                <div class="container text-center protocol-passage">
+
+                    <script>
+                        let opened = {};
+                        function onTitleClick (id) {
+                            if(opened[id]){
+                                document.getElementById(`area${id}`).children[1].style.height=0
+                                document.getElementById(`area${id}`).children[1].style.paddingTop=0
+                                document.getElementById(`area${id}`).children[1].style.paddingBottom=0
+                                opened[id] = false
+                                console.log('close')
+                            }else{
+                                document.getElementById(`area${id}`).children[1].style.height='unset'
+                                document.getElementById(`area${id}`).children[1].style.paddingTop = '20px'
+                                document.getElementById(`area${id}`).children[1].style.paddingBottom = '10px'
+                                opened[id] = true
+                                console.log('open')
+                            }
+                        }
+                    </script>
+
+                    <div class="foldable" id="area1">
+
+                        <div class="title-bar" onclick="onTitleClick(1)">
+                            <h4>Culture of Escherichia coli and growth curve</h4>
+                        </div>
+
+                        <div class="foldable-content">
+                            <h5 id="materials-1">Materials:</h5>
+                            <h6 id="equipments">Equipments:</h6>
+                            <ol start="">
+                            <li>E. coli colonies on solid medium</li>
+                            <li>Sterile Erlenmeyer flasks with caps</li>
+                            <li>Pipettes and pipette tips</li>
+                            <li>Cuvettes</li>
+                            <li>A spectrophotometer</li>
+
+                            </ol>
+                            <h6 id="consumables-1">Consumables:</h6>
+                            <ol start="">
+                            <li>E. coli colonies on solid medium</li>
+                            <li>Luria-Bertani (LB) broth</li>
+
+                            </ol>
+                            <h5 id="protocol-1">Protocol:</h5>
+                            <h6 id="e-coli-culture">E. coli culture</h6>
+                            <ol start="">
+                            <li>Using aseptic technique, carefully transfer a 10-ml aliquot of LB broth into a capped, sterile Erylenmeyer flask. </li>
+                            <li>With a sterile pipette tip, touch a single, well isolated colony on the solid medium plate. Resuspend the picked colony in the liquid medium.</li>
+                            <li>Replace the cap on the Erlenmeyer flask and incubate the flask in a 37 °C incubator with aeration 180 r.p.m.) overnight.</li>
+
+                            </ol>
+                            <h6 id="measure-the-growth-curve">Measure the growth curve</h6>
+                            <ol start="">
+                            <li>Vortex overnight culture to resuspend the cells. Remove 30 μl of overnight culture into 30 ml LB broth to inuculate. Culture the cells under 37 °C with aeration 180 r.p.m. </li>
+                            <li>Each time, swirl flask to evenly distribute the cells and aliquot 2 ml of the culture into a cuvette. Use 2 ml LB broth in another cuvette as blank control. Mesure the optical density (560 nm) using a spectrophotometer.</li>
+                            <li>Before entering log phase, repeat step 2 every hour. When OD<mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg aria-hidden="true" focusable="false" height="1.101ex" role="img" style="vertical-align: -0.375ex;" viewBox="0 -320.9 1143.7 486.5" width="2.587ex" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z" id="MJX-11-TEX-N-35"></path><path d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z" id="MJX-11-TEX-N-36"></path><path d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" id="MJX-11-TEX-N-30"></path></defs><g fill="currentColor" stroke="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"></g><g data-mjx-texclass="ORD" data-mml-node="TeXAtom" transform="translate(33,-150) scale(0.707)"><g data-mml-node="mn"><use data-c="35" xlink:href="#MJX-11-TEX-N-35"></use><use data-c="36" transform="translate(500,0)" xlink:href="#MJX-11-TEX-N-36"></use><use data-c="30" transform="translate(1000,0)" xlink:href="#MJX-11-TEX-N-30"></use></g></g></g></g></g></svg></mjx-container><script type="math/tex">_{560}</script> reaches about 0.8, measure the optical density every 30 minutes.</li>
+
+                            </ol>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+                    <div class="foldable" id="area2">
+
+                        <div class="title-bar" onclick="onTitleClick(2)">
+                            <h4>Storage of Escherichia coli frozen stocks in glycerol</h4>
+                        </div>
+
+                        <div class="foldable-content">
+                            <h5 id="materials-2">Materials:</h5>
+                            <h6 id="equipment-1">Equipment:</h6>
+                            <ol start="">
+                            <li>Pipettes and pipette tips</li>
+                            <li>Centrifugator</li>
+                            <li>1.5 ml microfuges</li>
+                            <li>-80 °C freezer</li>
+
+                            </ol>
+                            <h6 id="consumables-2">Consumables:</h6>
+                            <ol start="">
+                            <li>E. coli liquid culture</li>
+                            <li>Luria-Bertani (LB) broth, sterile</li>
+                            <li>30 % (v/v) glycerol</li>
+
+                            </ol>
+                            <h5 id="protocol-2">Protocol:</h5>
+                            <ol start="">
+                            <li>From E. coli liquid culture, alliquot 1.2 ml into the microfuge. Centrifuge the cells at 3000 rpm for 5 minutes. Carefully discard the supernatant. Add another 1.2 ml culture and centrifuge. Repeat 3 times.</li>
+                            <li>Resuspend the cell pellets with 0.5ml LB broth. Add 0.5ml of 30% (v/v) glycerol, and vortex to mix well.</li>
+                            <li>Label the vial and cap with appropriate strain names and other relevant information and freeze immediately in a -80°C freezer.</li>
+
+                            </ol>
+                            <h4 id="3-culture-of-acetobacter-pasteurianus">3. Culture of acetobacter pasteurianus</h4>
+                            <h5 id="materials-3">Materials:</h5>
+                            <h6 id="equipment-2">Equipment:</h6>
+                            <ol start="">
+                            <li>Erlenmeyer flasks with cap</li>
+                            <li>Pipettes and pipette tips</li>
+
+                            </ol>
+                            <h6 id="consumables-3">Consumables:</h6>
+                            <ol start="">
+                            <li>Tryptone</li>
+                            <li>Yeast extract</li>
+                            <li>Glucose</li>
+                            <li>Anhydrous ethanol</li>
+
+                            </ol>
+                            <h5 id="protocol-3">Protocol:</h5>
+                            <h6 id="deploy-culture-media">Deploy culture media:</h6>
+                            <ol start="">
+                            <li>10 g/L tryptone, 5 g/L yeast extract, 20 g/L glucose, heat until everything dissolves. Cover the flasks with membrane. Autoclave under 115 °C for 15 minutes.</li>
+
+                            </ol>
+                            <h6 id="acetobacter-pasteurianus-culture">Acetobacter pasteurianus culture:</h6>
+                            <ol start="">
+                            <li>Use a sterile pipette tip to transfer a single colony from the solid medium plate into 25 ml culture medium. Culture in a 30 °C incubator with areation of 180 r.p.m. overnight. </li>
+                            <li>Prepare four sterile Erlenmeyer flasks, add 50 ml of culture medium to each flask. Add 1 ml, 2 ml and 3 ml anhydrous ethanol to three flasks respectively and label the flasks.</li>
+                            <li>Add 50 μl overnight cell culture into each flask. Culture for at least 24 hours to observe the growth situation.</li>
+
+                            </ol>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="foldable" id="area3">
+
+                        <div class="title-bar" onclick="onTitleClick(3)">
+                            <h4>Transformation of Escherichia coli by heat shock</h4>
+                        </div>
+
+                        <div class="foldable-content">
+                            <h5 id="materials-4">Materials:</h5>
+                            <h6 id="equipment-3">Equipment:</h6>
+                            <ol start="">
+                            <li>Pipette and pipette tips</li>
+                            <li>Eppendorf tubes</li>
+                            <li>Centrifuge</li>
+                            <li>Flasks</li>
+                            <li>Heat bath</li>
+
+                            </ol>
+                            <h6 id="consumables-4">Consumables:</h6>
+                            <ol start="">
+                            <li>Reconstructed plasmid, 1ng/μl in TE buffer.</li>
+                            <li>ddH<mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg aria-hidden="true" focusable="false" height="1.065ex" role="img" style="vertical-align: -0.339ex;" viewBox="0 -320.9 436.6 470.9" width="0.988ex" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" id="MJX-14-TEX-N-32"></path></defs><g fill="currentColor" stroke="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"></g><g data-mml-node="mn" transform="translate(33,-150) scale(0.707)"><use data-c="32" xlink:href="#MJX-14-TEX-N-32"></use></g></g></g></g></svg></mjx-container><script type="math/tex">_2</script>O</li>
+                            <li>0.1 M CaCl<mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg aria-hidden="true" focusable="false" height="1.065ex" role="img" style="vertical-align: -0.339ex;" viewBox="0 -320.9 436.6 470.9" width="0.988ex" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" id="MJX-14-TEX-N-32"></path></defs><g fill="currentColor" stroke="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"></g><g data-mml-node="mn" transform="translate(33,-150) scale(0.707)"><use data-c="32" xlink:href="#MJX-14-TEX-N-32"></use></g></g></g></g></svg></mjx-container><script type="math/tex">_2</script></li>
+                            <li>Luria-Bertani broth media</li>
+                            <li>LB plates with ampicillin</li>
+
+                            </ol>
+                            <h5 id="protocol-4">Protocol:</h5>
+                            <h6 id="competent-cells-preparation">Competent cells preparation:</h6>
+                            <ol start="">
+                            <li>Culture the E. coli cells in 50 ml LB broth to mid-log phase. The mid-log phase generally has an absorption value of OD<mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg aria-hidden="true" focusable="false" height="1.101ex" role="img" style="vertical-align: -0.375ex;" viewBox="0 -320.9 1143.7 486.5" width="2.587ex" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z" id="MJX-11-TEX-N-35"></path><path d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z" id="MJX-11-TEX-N-36"></path><path d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" id="MJX-11-TEX-N-30"></path></defs><g fill="currentColor" stroke="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"></g><g data-mjx-texclass="ORD" data-mml-node="TeXAtom" transform="translate(33,-150) scale(0.707)"><g data-mml-node="mn"><use data-c="35" xlink:href="#MJX-11-TEX-N-35"></use><use data-c="36" transform="translate(500,0)" xlink:href="#MJX-11-TEX-N-36"></use><use data-c="30" transform="translate(1000,0)" xlink:href="#MJX-11-TEX-N-30"></use></g></g></g></g></g></svg></mjx-container><script type="math/tex">_{560}</script> between 0.6 and 1.5.</li>
+                            <li>Place about 40 ml of bacterial culture in a sterile 50 ml centrifuge tube and spin at 4000 r.p.m. for 5 minutes at 4 °C in a Eppendorf table-top centrifuge.</li>
+
+                            </ol>
+                            <p><em>The following procedures should be performed on ice for maximal transformation rate.</em></p>
+                            <ol start="3">
+                            <li>Carefully remove the supernatant and resuspend the cells with 4 ml ice-cold 0.1 M CaCl<mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg aria-hidden="true" focusable="false" height="1.065ex" role="img" style="vertical-align: -0.339ex;" viewBox="0 -320.9 436.6 470.9" width="0.988ex" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" id="MJX-14-TEX-N-32"></path></defs><g fill="currentColor" stroke="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"></g><g data-mml-node="mn" transform="translate(33,-150) scale(0.707)"><use data-c="32" xlink:href="#MJX-14-TEX-N-32"></use></g></g></g></g></svg></mjx-container><script type="math/tex">_2</script>. Incubate the bacterial suspension on ice for 30 minutes.</li>
+                            <li>Centrifuge at 4000 r.p.m. for 5 minutes at 4 °C. Remove the supernatant. Add 0.1 ml ice-cold 0.1 M CaCl<mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg aria-hidden="true" focusable="false" height="1.065ex" role="img" style="vertical-align: -0.339ex;" viewBox="0 -320.9 436.6 470.9" width="0.988ex" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" id="MJX-14-TEX-N-32"></path></defs><g fill="currentColor" stroke="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"></g><g data-mml-node="mn" transform="translate(33,-150) scale(0.707)"><use data-c="32" xlink:href="#MJX-14-TEX-N-32"></use></g></g></g></g></svg></mjx-container><script type="math/tex">_2</script> to resuspend the pellet. Keep the tube on ice.</li>
+
+                            </ol>
+                            <h6 id="heat-shock-induction">Heat shock induction:</h6>
+                            <ol start="">
+                            <li>Add 100 μl bacteria solution and 1 μl plasmid solution to a 1.5 ml pre-chilled microfuge tube. Incubate the tube on ice for 20 minutes.</li>
+                            <li>Place the tube in water bath at 42 °C for 45 seconds. Immediately place the tube on ice for at least 3 minutes.</li>
+                            <li>Add 1 ml room temperature LB liquid media to each tube. Incubate the tube under 225 r.p.m., 37 °C to recover the bacteria.</li>
+
+                            </ol>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="foldable" id="area4">
+
+                        <div class="title-bar" onclick="onTitleClick(4)">
+                            <h4>Ethanol decomposition</h4>
+                        </div>
+
+                        <div class="foldable-content">
+                            <h5 id="materials-5">Materials:</h5>
+                            <h6 id="equipment-4">Equipment:</h6>
+                            <ol start="">
+                            <li>Pipettes and pipette tips</li>
+                            <li>Erylenmeyer flasks</li>
+                            <li>Microfuge tubes</li>
+
+                            </ol>
+                            <h6 id="consumables-5">Consumables:</h6>
+                            <ol start="">
+                            <li>Luria-Bertani broth media</li>
+                            <li>Acetobacter culture media</li>
+                            <li>ddH<mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg aria-hidden="true" focusable="false" height="1.065ex" role="img" style="vertical-align: -0.339ex;" viewBox="0 -320.9 436.6 470.9" width="0.988ex" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" id="MJX-14-TEX-N-32"></path></defs><g fill="currentColor" stroke="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"></g><g data-mml-node="mn" transform="translate(33,-150) scale(0.707)"><use data-c="32" xlink:href="#MJX-14-TEX-N-32"></use></g></g></g></g></svg></mjx-container><script type="math/tex">_2</script>O</li>
+                            <li>50 mg/ml IPTG</li>
+
+                            </ol>
+                            <h5 id="protocols">Protocols:</h5>
+                            <ol start="">
+                            <li><p>Culture the E. coli BL-21, E.coli BL-21 with plasmid and acetobacter, each in 500 ml culture media. Store them under 4 °C.</p>
+                            </li>
+                            <li><p>Before use E. coli BL-21 (plasmid) culture, recover the cells in 37°C incubator for 2 hours, add 50 mg/ml IPTG in a ratio of 1/10, incubate for 30 minutes.</p>
+                            </li>
+                            <li><p>Deploy each experiment set according to the table:</p>
+                            <p>				  酒精浓度	0%	2%	4%	6%	8%</p>
+                            <p>实验组别  <br/>无菌水10mL				1		2		3		4		5
+                            BL-21 10mL				6		7		8		9		10
+                            BL-21(plasmid）10mL	11	12	13	14		15
+                            BL-21 5mL+巴氏醋杆菌 5mL	16	17	18	19	20
+                            BL-21(plasmid） 5mL+巴氏醋杆菌 5mL	21	22	23	24	25</p>
+                            </li>
+                            <li><p>Take 1 ml of the mixture and store as blank control. Culture the remaining bacteria for 14 hours.</p>
+                            </li>
+                            <li><p>Use Ethanol Colorimetric/Fluorometric Assay Kit to measure the alcohol concentration.</p>
+                            </li>
+
+                            </ol>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+                    <div class="foldable" id="area5">
+
+                        <div class="title-bar" onclick="onTitleClick(5)">
+                            <h4>Testing proper concentration range of PVA/SA cross-linking beads</h4>
+                        </div>
+
+                        <div class="foldable-content">
+                            
+                            <p class="MsoNormal"><span style='font-size:18.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Materials<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Consumables:<o:p></o:p></span></b></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Poly vinyl alcohol, 1788<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Sodium alginate<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Boric acid<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>CaCl2 Analytical Titrant, 0.5M<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'><o:p> </o:p></span></p>
+                            
+                            <p class="MsoNormal"><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Equipment:<o:p></o:p></span></b></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>100 ml cylinder<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Analytical balance<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Experiment containers<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>100 ml Beakers<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:18.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Protocol<o:p></o:p></span></p>
+                        
+                            <p class="MsoListParagraph" style="text-indent:-.25in;mso-list:l3 level1 lfo4"><!--[if !supportLists]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+                            "Times New Roman";mso-ansi-language:EN-US'><span style="mso-list:Ignore">1.<span style='font:7.0pt "Times New Roman"'>     </span></span></span><!--[endif]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ansi-language:
+                            EN-US'>PVA and Sodium alginate with different concentrations are mixed in
+                            beakers as shown in chart 1. The mixture is then put in 80% for 4h to get fully
+                            dissolved.<o:p></o:p></span></p>
+                            
+                            <p class="MsoListParagraphCxSpFirst" style="text-indent:-.25in;mso-list:l3 level1 lfo4"><!--[if !supportLists]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+                            "Times New Roman";mso-ansi-language:EN-US'><span style="mso-list:Ignore">2.<span style='font:7.0pt "Times New Roman"'>     </span></span></span><!--[endif]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ansi-language:
+                            EN-US'>The solution above is added to 10 ml immobilizing (boric acid + 2/3/4%
+                            CaCl2) solutions in the experiment containers with 10 ul pipette, yielding 20
+                            beads and kept in 4</span><span lang="ZH-CN" style='font-size:12.0pt;font-family:
+                            DengXian;mso-ascii-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;
+                            mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+                            mso-ansi-language:EN-US'>°</span><span style='font-size:12.0pt;font-family:
+                            "Times New Roman",serif;mso-ansi-language:EN-US'>C refrigerator forming for
+                            24h.<o:p></o:p></span></p>
+                            
+                            <p class="MsoListParagraphCxSpLast" style="text-indent:-.25in;mso-list:l3 level1 lfo4"><!--[if !supportLists]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+                            "Times New Roman";mso-ansi-language:EN-US'><span style="mso-list:Ignore">3.<span style='font:7.0pt "Times New Roman"'>     </span></span></span><!--[endif]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ansi-language:
+                            EN-US'>Heat <span class="GramE">dry</span> the liquid up after the bead were
+                            collected from the immobilizing solution. Collecting and observing the bead
+                            properties (as unshaped, flat and formed), and the formed ones should be
+                            retained in 4</span><span lang="ZH-CN" style='font-size:12.0pt;font-family:DengXian;
+                            mso-ascii-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;
+                            mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+                            mso-ansi-language:EN-US'>°</span><span style='font-size:12.0pt;font-family:
+                            "Times New Roman",serif;mso-ansi-language:EN-US'>C water for further tests.<o:p></o:p></span></p>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <div class="foldable" id="area6">
+
+                        <div class="title-bar" onclick="onTitleClick(6)">
+                            <h4>Testing ethanol degradation rate of PVA/SA cross-linking beads (with E. coli and A.A.B.)</h4>
+                        </div>
+
+                        <div class="foldable-content">
+                            
+                            <p class="MsoNormal"><span style='font-size:18.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Materials<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Consumables:<o:p></o:p></span></b></p>
+
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Poly vinyl alcohol, 1788<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Sodium alginate<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Boric acid<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>CaCl2 Analytical Titrant, 0.5M<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Ethanol<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Equipment:<o:p></o:p></span></b></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>50 ml cylinder<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Shaker <o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>100 ml Beakers<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Ethanol meter<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:18.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Protocol<o:p></o:p></span></p>
+                            
+                            <p class="MsoListParagraph" style="text-indent:-.25in;mso-list:l3 level1 lfo4"><!--[if !supportLists]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+                            "Times New Roman";mso-ansi-language:EN-US'><span style="mso-list:Ignore">4.<span style='font:7.0pt "Times New Roman"'>     </span></span></span><!--[endif]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ansi-language:
+                            EN-US'>8% PVA and 2.5% Sodium alginate are mixed in beakers as shown in chart
+                            1. The mixture is then put in 80% for 4h to get fully dissolved.<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal" style="margin-left:.25in"><span style='font-size:12.0pt;
+                            font-family:"Times New Roman",serif;mso-ansi-language:EN-US'><o:p> </o:p></span></p>
+                            
+                            <p class="MsoListParagraphCxSpFirst" style="text-indent:-.25in;mso-list:l3 level1 lfo4"><!--[if !supportLists]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+                            "Times New Roman";mso-ansi-language:EN-US'><span style="mso-list:Ignore">5.<span style='font:7.0pt "Times New Roman"'>     </span></span></span><!--[endif]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ansi-language:
+                            EN-US'>The solution above is added to 10 ml immobilizing (boric acid + 3%
+                            CaCl2+1ml <span class="GramE">E.coli</span> and ACE) solutions in the experiment
+                            containers with 10 ul pipette, yielding 20 beads and kept in 25-degree shaker forming
+                            for 24h.<o:p></o:p></span></p>
+                            
+                            <p class="MsoListParagraphCxSpMiddle"><span style='font-size:12.0pt;font-family:
+                            "Times New Roman",serif;mso-ansi-language:EN-US'><o:p> </o:p></span></p>
+                            
+                            <p class="MsoListParagraphCxSpLast" style="text-indent:-.25in;mso-list:l3 level1 lfo4"><!--[if !supportLists]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+                            "Times New Roman";mso-ansi-language:EN-US'><span style="mso-list:Ignore">6.<span style='font:7.0pt "Times New Roman"'>     </span></span></span><!--[endif]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ansi-language:
+                            EN-US'>The bead <span class="GramE">were</span> collected from the immobilizing
+                            solution. The beads are then washed up with SPSS. The beads <span class="GramE">is</span>
+                            then put into 20ml 5% ethanol solution. Record the concentration of ethanol
+                            with ethanol meter every 24 hours.<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:18.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'><o:p> </o:p></span></p>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="foldable" id="area7">
+
+                        <div class="title-bar" onclick="onTitleClick(7)">
+                            <h4>Testing bacteria permeability of PVA/SA cross-linking beads</h4>
+                        </div>
+
+                        <div class="foldable-content">
+                            
+                            <p class="MsoNormal"><span style='font-size:18.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Materials<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Consumable:<o:p></o:p></span></b></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Poly vinyl alcohol, 1788<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Sodium alginate<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Boric acid<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>LB broth<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Acetobacter <span class="SpellE">pasteurianus</span>
+                            cultural media<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>CaCl2 Analytical Titrant, 0.5M<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Equipment:<o:p></o:p></span></b></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Spectrometer<o:p></o:p></span></p>
+
+                            <p class="MsoNormal"><span style='font-size:18.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Protocol: <o:p></o:p></span></p>
+                            
+                            <p class="MsoListParagraph" style="text-indent:-.25in;mso-list:l1 level1 lfo1"><!--[if !supportLists]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+                            "Times New Roman";mso-ansi-language:EN-US'><span style="mso-list:Ignore">1.<span style='font:7.0pt "Times New Roman"'>     </span></span></span><!--[endif]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ansi-language:
+                            EN-US'>Take standard ingredient (PVA 8%, SA 3%, CaCl<sub>2 </sub>3%, 10%
+                            bacteria mixture) of beads from protocol 1.<o:p></o:p></span></p>
+                            
+                            <p class="MsoListParagraph" style="text-indent:-.25in;mso-list:l1 level1 lfo1"><!--[if !supportLists]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+                            "Times New Roman";mso-ansi-language:EN-US'><span style="mso-list:Ignore">2.<span style='font:7.0pt "Times New Roman"'>     </span></span></span><!--[endif]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ansi-language:
+                            EN-US'>Cultivating ‘standard’ beads into LB broth and A. <span class="SpellE">pasteurianus</span>
+                            cultural media for 24 h. Measuring optical density of 560 mm and 600nm,
+                            corresponding to E. coli and Acetobacter, to see whether the bacteria cells
+                            would leak out of beads and grow.<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style="mso-ansi-language:EN-US"><o:p> </o:p></span></p>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <div class="foldable" id="area8">
+
+                        <div class="title-bar" onclick="onTitleClick(8)">
+                            <h4>Using <span class="SpellE">Plackett</span>-Burman Design to get decisive variables for the beads’ ethanol degradation</h4>
+                        </div>
+
+                        <div class="foldable-content">
+                            
+                            <p class="MsoNormal"><span style='font-size:18.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Materials<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Consumable:<o:p></o:p></span></b></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Poly vinyl alcohol, 1788<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Sodium alginate<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Boric acid<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Sodium boride <o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>CaCl2 Analytical Titrant, 0.5M<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Equipment:<o:p></o:p></span></b></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Ethanol meter<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:18.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'>Protocol<o:p></o:p></span></p>
+                            
+                            <p class="MsoListParagraph" style="text-indent:-.25in;mso-list:l2 level1 lfo2"><!--[if !supportLists]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+                            "Times New Roman";mso-ansi-language:EN-US'><span style="mso-list:Ignore">1.<span style='font:7.0pt "Times New Roman"'>     </span></span></span><!--[endif]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ansi-language:
+                            EN-US'>The levels are designed as shown in table 1: <o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'><o:p> </o:p></span></p>
+                        
+                            <table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse:collapse;border:none;
+                                mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt">
+                                <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+                                <td style="width:66.75pt;border:solid windowtext 1.0pt;
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>Level<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.75pt;border:solid windowtext 1.0pt;
+                                border-left:none;mso-border-alt:
+                                solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>PVA (%)<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border:solid windowtext 1.0pt;
+                                border-left:none;mso-border-alt:
+                                solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>SA (%)<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border:solid windowtext 1.0pt;
+                                border-left:none;mso-border-alt:
+                                solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>CaCl<sub>2 </sub>(%)<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border:solid windowtext 1.0pt;
+                                border-left:none;mso-border-alt:
+                                solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>Time (h)<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border:solid windowtext 1.0pt;
+                                border-left:none;mso-border-alt:
+                                solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>pH<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border:solid windowtext 1.0pt;
+                                border-left:none;mso-border-alt:
+                                solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>Bac. Inoculation (%)<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+                                <tr style="mso-yfti-irow:1">
+                                <td style="width:66.75pt;border:solid windowtext 1.0pt;
+                                border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.75pt;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>7<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border-top:none;border-left:none;
+                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>2<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border-top:none;border-left:none;
+                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>2<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border-top:none;border-left:none;
+                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>24<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border-top:none;border-left:none;
+                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>6<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border-top:none;border-left:none;
+                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>10<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+                                <tr style="mso-yfti-irow:2">
+                                <td style="width:66.75pt;border:solid windowtext 1.0pt;
+                                border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>0<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.75pt;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>8<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border-top:none;border-left:none;
+                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>3<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border-top:none;border-left:none;
+                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>3<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border-top:none;border-left:none;
+                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>48<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border-top:none;border-left:none;
+                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>7<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border-top:none;border-left:none;
+                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>15<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+                                <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+                                <td style="width:66.75pt;border:solid windowtext 1.0pt;
+                                border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>1<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.75pt;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>9<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border-top:none;border-left:none;
+                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>4<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border-top:none;border-left:none;
+                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>4<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border-top:none;border-left:none;
+                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>72<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border-top:none;border-left:none;
+                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>8<o:p></o:p></span></p>
+                                </td>
+                                <td style="width:66.8pt;border-top:none;border-left:none;
+                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt" valign="top" width="89">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                                mso-ansi-language:EN-US'>20<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+                            </tbody></table>
+                        
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            color:white;mso-color-alt:windowtext;mso-ansi-language:EN-US'><span style="mso-tab-count:1">            </span></span><span style='font-size:12.0pt;
+                            font-family:"Times New Roman",serif;mso-ansi-language:EN-US'><o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'><span style="mso-tab-count:1">            </span>And
+                            the beads are prepared as shown in following table 2, each with 0.1 ml volume.<o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'><o:p> </o:p></span></p>
+                            
+                            <p class="MsoListParagraph" style="text-indent:-.25in;mso-list:l2 level1 lfo2"><!--[if !supportLists]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+                            "Times New Roman";mso-ansi-language:EN-US'><span style="mso-list:Ignore">2.<span style='font:7.0pt "Times New Roman"'>     </span></span></span><!--[endif]--><span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ansi-language:
+                            EN-US'>50 beads are then added into 4% alcohol in the container. The alcohol
+                            concentration is then measured with ethanol meter and put into constant
+                            temperature shaker, 37 </span><span lang="ZH-CN" style='font-size:12.0pt;
+                            font-family:DengXian;mso-ascii-font-family:"Times New Roman";mso-fareast-theme-font:
+                            minor-fareast;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+                            "Times New Roman";mso-ansi-language:EN-US'>°</span><span style='font-size:12.0pt;
+                            font-family:"Times New Roman",serif;mso-ansi-language:EN-US'>C to cultivate for
+                            alcohol degradation. After cultivation, the alcohol concentration is again
+                            measured. The data is then collected for Minitab’s Placket-Burman analysis. <o:p></o:p></span></p>
+                            
+                            <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+                            mso-ansi-language:EN-US'><o:p> </o:p></span></p>
+                        
+                            <table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse:collapse;border:none;
+                                mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt">
+                                <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;height:15.0pt">
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt;
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>Group<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt;
+                                border-left:none;mso-border-alt:
+                                solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>Time<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt;
+                                border-left:none;mso-border-alt:
+                                solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>PVA<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt;
+                                border-left:none;mso-border-alt:
+                                solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>SA<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt;
+                                border-left:none;mso-border-alt:
+                                solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>CaCl2<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt;
+                                border-left:none;mso-border-alt:
+                                solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>pH<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:.9in;border:solid windowtext 1.0pt;
+                                border-left:none;mso-border-alt:
+                                solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="86">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>Bac.
+                                inoculation<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+                                <tr style="mso-yfti-irow:1;height:15.0pt">
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt;
+                                border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:.9in;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="86">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+                                <tr style="mso-yfti-irow:2;height:15.0pt">
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt;
+                                border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>2<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:.9in;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="86">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+                                <tr style="mso-yfti-irow:3;height:15.0pt">
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt;
+                                border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>3<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:.9in;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="86">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+                                <tr style="mso-yfti-irow:4;height:15.0pt">
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt;
+                                border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>4<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:.9in;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="86">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+                                <tr style="height:15.0pt">
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt;
+                                border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>5<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:.9in;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="86">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+                                <tr style="height:15.0pt">
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt;
+                                border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>6<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:.9in;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="86">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+                                <tr style="mso-yfti-irow:7;height:15.0pt">
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt;
+                                border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>7<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:.9in;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="86">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+                                <tr style="mso-yfti-irow:8;height:15.0pt">
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt;
+                                border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>8<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:.9in;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="86">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+                                <tr style="mso-yfti-irow:9;height:15.0pt">
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt;
+                                border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>9<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:.9in;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="86">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+                                <tr style="mso-yfti-irow:10;height:15.0pt">
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt;
+                                border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>10<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:.9in;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="86">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+
+
+                                <tr style="mso-yfti-irow:11;height:15.0pt">
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt; border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>11<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:.9in;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="86">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+
+                                <tr style="mso-yfti-irow:11;height:15.0pt">
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt; border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>12<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:.9in;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="86">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+
+                                <tr style="mso-yfti-irow:11;height:15.0pt">
+                                <td nowrap="" style="width:53.0pt;border:solid windowtext 1.0pt; border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>13<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>0<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>0<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>0<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>0<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="71">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>0<o:p></o:p></span></p>
+                                </td>
+                                <td nowrap="" style="width:.9in;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt" valign="top" width="86">
+                                <p class="MsoNormal"><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>0<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+                                
+    
+                                <!-- <tr style='mso-yfti-irow:11;height:15.0pt'>
+                                <td width=71 nowrap valign=top style='width:53.0pt;border:solid windowtext 1.0pt;
+                                border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+                                <p class='MsoNormal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>12<o:p></o:p></span></p>
+                                </td>
+                                <td width=71 nowrap valign=top style='width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+                                <p class='MsoNormal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td width=71 nowrap valign=top style='width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+                                <p class='MsoNormal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td width=71 nowrap valign=top style='width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+                                <p class='MsoNormal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td width=71 nowrap valign=top style='width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+                                <p class='MsoNormal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                <td width=71 nowrap valign=top style='width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+                                <p class='MsoNormal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>-1<o:p></o:p></span></p>
+                                </td>
+                                <td width=86 nowrap valign=top style='width:.9in;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+                                <p class='MsoNormal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>1<o:p></o:p></span></p>
+                                </td>
+                                </tr>
+    
+                                <tr style='mso-yfti-irow:11;height:15.0pt'>
+                                <td width=71 nowrap valign=top style='width:53.0pt;border:solid windowtext 1.0pt;
+                                border-top:none;
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+                                <p class='MsoNormal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>13<o:p></o:p></span></p>
+                                </td>
+                                <td width=71 nowrap valign=top style='width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+                                <p class='MsoNormal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>0<o:p></o:p></span></p>
+                                </td>
+                                <td width=71 nowrap valign=top style='width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+                                <p class='MsoNormal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>0<o:p></o:p></span></p>
+                                </td>
+                                <td width=71 nowrap valign=top style='width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+                                <p class='MsoNormal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>0<o:p></o:p></span></p>
+                                </td>
+                                <td width=71 nowrap valign=top style='width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+                                <p class='MsoNormal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>0<o:p></o:p></span></p>
+                                </td>
+                                <td width=71 nowrap valign=top style='width:53.0pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+                                <p class='MsoNormal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>0<o:p></o:p></span></p>
+                                </td>
+                                <td width=86 nowrap valign=top style='width:.9in;border-top:none;border-left:
+                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                
+                                padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+                                <p class='MsoNormal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>0<o:p></o:p></span></p>
+                                </td>
+                                </tr> -->
+
+                            </tbody></table>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>    
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="section-5 text-center">
+                <h4 style="margin-top:5%">Healthier drinking with Etha<span style="color:#3898ff">NO</span></h4>
+                <!-- <h4 class="my-4">If You Need Any Help</h4>
+
+                <div class="form-inline justify-content-center">
+                    <input type="text" name="Email" id="email" placeholder="Enter Email" size="40" class="form-control px-4 py-2">
+                    <input type="button" value="Contact Us" class="btn btn-danger px-4 py-2 ml-2">
+
+                </div> -->
+
+                <div class="social" style="margin:5%">
+                    <div class="d-flex flex-row justify-content-center" style="font-size: 0.8em; margin-right: 40px;">
+                        <div class="d-flex flex-column">
+                            <img src="https://2021.igem.org/wiki/images/c/cd/T--CUHKSZ--email.png" style="align-self: center;" width="100px"/>
+                            st_igemcuhksz@link.cuhk.edu.cn
+                        </div>
+                        
+                        <div class="d-flex flex-column" style="margin-left: 20px;">
+                            <img src="https://2021.igem.org/wiki/images/a/a2/T--CUHKSZ--qrcode.jpeg" style="align-self: center;" width="100px"/>
+                            EthaNO Public Account
+                        </div>
+
+                        <div class="d-flex flex-column" style="margin-left: 40px;">
+                            <img src="https://2021.igem.org/wiki/images/9/9b/T--CUHKSZ--university.png" style="align-self: center;" width="80px"/>
+                            <img src="https://2021.igem.org/wiki/images/c/ce/T--CUHKSZ--lhs.jpeg" style="align-self: center;" width="150px"/>
+                        </div>
+                        
+                    </div>
+                </div>
+                <hr/>
+                
+
+
+            </div>
+        </footer>
+
+
+        <script src="https://2021.igem.org/Template:CUHKSZ/js/jquery-3-3-1-slim-minJS?action=raw&amp;ctype=text/javascript"></script>
+        <script src="https://2021.igem.org/Template:CUHKSZ/js/popper-minJS?action=raw&amp;ctype=text/javascript"></script>
+        <script src="https://2021.igem.org/Template:CUHKSZ/js/bootstrap-minJS?action=raw&amp;ctype=text/javascript"></script>
+        <script src="https://2021.igem.org/Template:CUHKSZ/js/scrollrevealJS?action=raw&amp;ctype=text/javascript"></script>
+
+        <script>
+            window.sr = ScrollReveal({duration:1000});
+            sr.reveal('.site-content .d-flex');
+            sr.reveal('.section-1 .card');
+            sr.reveal('.section-2 .d-flex');
+            sr.reveal('.section-3 .col-md-4');
+            sr.reveal('.section-4 .col-md-7, .col-md-5');
+        </script>
+
+    </div>
+
+</body></html>
